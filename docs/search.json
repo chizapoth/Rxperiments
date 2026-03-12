@@ -1,0 +1,349 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Rxperiments",
+    "section": "",
+    "text": "This site documents my experiments and learning journey with various pharmaverse packages for clinical data analysis in R.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#welcome",
+    "href": "index.html#welcome",
+    "title": "Rxperiments",
+    "section": "",
+    "text": "This site documents my experiments and learning journey with various pharmaverse packages for clinical data analysis in R.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#packages-covered",
+    "href": "index.html#packages-covered",
+    "title": "Rxperiments",
+    "section": "Packages Covered",
+    "text": "Packages Covered\n\ngtsummary\nA package for creating publication-ready analytical and summary tables. Perfect for demographics tables, regression summaries, and more.\n\n\ncrane\nTools for clinical reporting and analysis.\n\n\nOther Pharmaverse Packages\n\nadmiral - ADaM dataset creation\nrtables - Complex table layouts for regulatory submissions",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#about-this-site",
+    "href": "index.html#about-this-site",
+    "title": "Rxperiments",
+    "section": "About This Site",
+    "text": "About This Site\nThis is a personal learning resource. Code examples are experimental and may not represent best practices.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#resources",
+    "href": "index.html#resources",
+    "title": "Rxperiments",
+    "section": "Resources",
+    "text": "Resources\n\nPharmaverse\ngtsummary documentation\nCDISC Standards",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "gtsummary/tables.html",
+    "href": "gtsummary/tables.html",
+    "title": "Summary Tables with gtsummary",
+    "section": "",
+    "text": "Code\nlibrary(gtsummary)\n\n# Demographics table example\ntrial %&gt;%\n  tbl_summary(\n    include = c(age, grade, stage),\n    by = trt,\n    statistic = list(\n      all_continuous() ~ \"{mean} ({sd})\",\n      all_categorical() ~ \"{n} ({p}%)\"\n    )\n  ) %&gt;%\n  add_overall() %&gt;%\n  add_p() %&gt;%\n  bold_labels()",
+    "crumbs": [
+      "gtsummary",
+      "Summary Tables"
+    ]
+  },
+  {
+    "objectID": "gtsummary/tables.html#demographics-tables",
+    "href": "gtsummary/tables.html#demographics-tables",
+    "title": "Summary Tables with gtsummary",
+    "section": "",
+    "text": "Code\nlibrary(gtsummary)\n\n# Demographics table example\ntrial %&gt;%\n  tbl_summary(\n    include = c(age, grade, stage),\n    by = trt,\n    statistic = list(\n      all_continuous() ~ \"{mean} ({sd})\",\n      all_categorical() ~ \"{n} ({p}%)\"\n    )\n  ) %&gt;%\n  add_overall() %&gt;%\n  add_p() %&gt;%\n  bold_labels()",
+    "crumbs": [
+      "gtsummary",
+      "Summary Tables"
+    ]
+  },
+  {
+    "objectID": "gtsummary/tables.html#regression-tables",
+    "href": "gtsummary/tables.html#regression-tables",
+    "title": "Summary Tables with gtsummary",
+    "section": "Regression Tables",
+    "text": "Regression Tables\n\n\nCode\n# Logistic regression summary\nglm(response ~ age + grade, data = trial, family = binomial) %&gt;%\n  tbl_regression(exponentiate = TRUE)",
+    "crumbs": [
+      "gtsummary",
+      "Summary Tables"
+    ]
+  },
+  {
+    "objectID": "gtsummary/tables.html#experiments",
+    "href": "gtsummary/tables.html#experiments",
+    "title": "Summary Tables with gtsummary",
+    "section": "Experiments",
+    "text": "Experiments\nAdd your experiments here…",
+    "crumbs": [
+      "gtsummary",
+      "Summary Tables"
+    ]
+  },
+  {
+    "objectID": "other/admiral.html",
+    "href": "other/admiral.html",
+    "title": "admiral - ADaM Dataset Creation",
+    "section": "",
+    "text": "admiral (ADaM in R Asset Library) is a pharmaverse package for creating ADaM datasets in R.",
+    "crumbs": [
+      "Other Packages",
+      "admiral"
+    ]
+  },
+  {
+    "objectID": "other/admiral.html#overview",
+    "href": "other/admiral.html#overview",
+    "title": "admiral - ADaM Dataset Creation",
+    "section": "",
+    "text": "admiral (ADaM in R Asset Library) is a pharmaverse package for creating ADaM datasets in R.",
+    "crumbs": [
+      "Other Packages",
+      "admiral"
+    ]
+  },
+  {
+    "objectID": "other/admiral.html#installation",
+    "href": "other/admiral.html#installation",
+    "title": "admiral - ADaM Dataset Creation",
+    "section": "Installation",
+    "text": "Installation\n\n\nCode\ninstall.packages(\"admiral\")",
+    "crumbs": [
+      "Other Packages",
+      "admiral"
+    ]
+  },
+  {
+    "objectID": "other/admiral.html#basic-example",
+    "href": "other/admiral.html#basic-example",
+    "title": "admiral - ADaM Dataset Creation",
+    "section": "Basic Example",
+    "text": "Basic Example\n\n\nCode\nlibrary(admiral)\nlibrary(dplyr)\n\n# Example: Derive treatment variables\n# adsl &lt;- dm %&gt;%\n#   derive_vars_merged(\n#     dataset_add = ex,\n#     by_vars = exprs(STUDYID, USUBJID),\n#     new_vars = exprs(TRTSDT = EXSTDTC)\n#   )",
+    "crumbs": [
+      "Other Packages",
+      "admiral"
+    ]
+  },
+  {
+    "objectID": "other/admiral.html#resources",
+    "href": "other/admiral.html#resources",
+    "title": "admiral - ADaM Dataset Creation",
+    "section": "Resources",
+    "text": "Resources\n\nadmiral documentation\nadmiral templates",
+    "crumbs": [
+      "Other Packages",
+      "admiral"
+    ]
+  },
+  {
+    "objectID": "other/admiral.html#experiments",
+    "href": "other/admiral.html#experiments",
+    "title": "admiral - ADaM Dataset Creation",
+    "section": "Experiments",
+    "text": "Experiments\nAdd your experiments here…",
+    "crumbs": [
+      "Other Packages",
+      "admiral"
+    ]
+  },
+  {
+    "objectID": "crane/intro.html",
+    "href": "crane/intro.html",
+    "title": "Getting Started with crane",
+    "section": "",
+    "text": "crane provides tools for clinical reporting and analysis in R.",
+    "crumbs": [
+      "crane",
+      "Getting Started"
+    ]
+  },
+  {
+    "objectID": "crane/intro.html#overview",
+    "href": "crane/intro.html#overview",
+    "title": "Getting Started with crane",
+    "section": "",
+    "text": "crane provides tools for clinical reporting and analysis in R.",
+    "crumbs": [
+      "crane",
+      "Getting Started"
+    ]
+  },
+  {
+    "objectID": "crane/intro.html#installation",
+    "href": "crane/intro.html#installation",
+    "title": "Getting Started with crane",
+    "section": "Installation",
+    "text": "Installation\n\n\nCode\n# Install from GitHub or CRAN as applicable\n# install.packages(\"crane\")",
+    "crumbs": [
+      "crane",
+      "Getting Started"
+    ]
+  },
+  {
+    "objectID": "crane/intro.html#basic-usage",
+    "href": "crane/intro.html#basic-usage",
+    "title": "Getting Started with crane",
+    "section": "Basic Usage",
+    "text": "Basic Usage\n\n\nCode\nlibrary(crane)\n\n# Add your crane experiments here",
+    "crumbs": [
+      "crane",
+      "Getting Started"
+    ]
+  },
+  {
+    "objectID": "crane/intro.html#resources",
+    "href": "crane/intro.html#resources",
+    "title": "Getting Started with crane",
+    "section": "Resources",
+    "text": "Resources\n\nPharmaverse",
+    "crumbs": [
+      "crane",
+      "Getting Started"
+    ]
+  },
+  {
+    "objectID": "crane/intro.html#experiments",
+    "href": "crane/intro.html#experiments",
+    "title": "Getting Started with crane",
+    "section": "Experiments",
+    "text": "Experiments\nAdd your experiments here…",
+    "crumbs": [
+      "crane",
+      "Getting Started"
+    ]
+  },
+  {
+    "objectID": "other/rtables.html",
+    "href": "other/rtables.html",
+    "title": "rtables - Complex Table Layouts",
+    "section": "",
+    "text": "rtables provides a framework for creating complex tables for regulatory submissions.",
+    "crumbs": [
+      "Other Packages",
+      "rtables"
+    ]
+  },
+  {
+    "objectID": "other/rtables.html#overview",
+    "href": "other/rtables.html#overview",
+    "title": "rtables - Complex Table Layouts",
+    "section": "",
+    "text": "rtables provides a framework for creating complex tables for regulatory submissions.",
+    "crumbs": [
+      "Other Packages",
+      "rtables"
+    ]
+  },
+  {
+    "objectID": "other/rtables.html#installation",
+    "href": "other/rtables.html#installation",
+    "title": "rtables - Complex Table Layouts",
+    "section": "Installation",
+    "text": "Installation\n\n\nCode\ninstall.packages(\"rtables\")",
+    "crumbs": [
+      "Other Packages",
+      "rtables"
+    ]
+  },
+  {
+    "objectID": "other/rtables.html#basic-example",
+    "href": "other/rtables.html#basic-example",
+    "title": "rtables - Complex Table Layouts",
+    "section": "Basic Example",
+    "text": "Basic Example\n\n\nCode\nlibrary(rtables)\n\n# Basic table layout\nlyt &lt;- basic_table() %&gt;%\n  split_cols_by(\"ARM\") %&gt;%\n  analyze(\"AGE\", afun = mean)\n\n# Build the table\n# build_table(lyt, data = adsl)",
+    "crumbs": [
+      "Other Packages",
+      "rtables"
+    ]
+  },
+  {
+    "objectID": "other/rtables.html#resources",
+    "href": "other/rtables.html#resources",
+    "title": "rtables - Complex Table Layouts",
+    "section": "Resources",
+    "text": "Resources\n\nrtables documentation",
+    "crumbs": [
+      "Other Packages",
+      "rtables"
+    ]
+  },
+  {
+    "objectID": "other/rtables.html#experiments",
+    "href": "other/rtables.html#experiments",
+    "title": "rtables - Complex Table Layouts",
+    "section": "Experiments",
+    "text": "Experiments\nAdd your experiments here…",
+    "crumbs": [
+      "Other Packages",
+      "rtables"
+    ]
+  },
+  {
+    "objectID": "gtsummary/intro.html",
+    "href": "gtsummary/intro.html",
+    "title": "Getting Started with gtsummary",
+    "section": "",
+    "text": "gtsummary creates publication-ready analytical and summary tables in R.",
+    "crumbs": [
+      "gtsummary",
+      "Getting Started"
+    ]
+  },
+  {
+    "objectID": "gtsummary/intro.html#overview",
+    "href": "gtsummary/intro.html#overview",
+    "title": "Getting Started with gtsummary",
+    "section": "",
+    "text": "gtsummary creates publication-ready analytical and summary tables in R.",
+    "crumbs": [
+      "gtsummary",
+      "Getting Started"
+    ]
+  },
+  {
+    "objectID": "gtsummary/intro.html#installation",
+    "href": "gtsummary/intro.html#installation",
+    "title": "Getting Started with gtsummary",
+    "section": "Installation",
+    "text": "Installation\n\n\nCode\ninstall.packages(\"gtsummary\")",
+    "crumbs": [
+      "gtsummary",
+      "Getting Started"
+    ]
+  },
+  {
+    "objectID": "gtsummary/intro.html#basic-example",
+    "href": "gtsummary/intro.html#basic-example",
+    "title": "Getting Started with gtsummary",
+    "section": "Basic Example",
+    "text": "Basic Example\n\n\nCode\nlibrary(gtsummary)\n\n# Create a summary table\ntrial %&gt;%\n  tbl_summary(\n    include = c(age, grade, response),\n    by = trt\n  ) %&gt;%\n  add_p()",
+    "crumbs": [
+      "gtsummary",
+      "Getting Started"
+    ]
+  },
+  {
+    "objectID": "gtsummary/intro.html#resources",
+    "href": "gtsummary/intro.html#resources",
+    "title": "Getting Started with gtsummary",
+    "section": "Resources",
+    "text": "Resources\n\ngtsummary documentation\ngtsummary gallery",
+    "crumbs": [
+      "gtsummary",
+      "Getting Started"
+    ]
+  }
+]

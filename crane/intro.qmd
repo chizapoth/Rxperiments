@@ -1,0 +1,31 @@
+---
+title: "Getting Started with crane"
+---
+## Overview
+
+`crane` provides tools for clinical reporting and analysis in R.
+
+## Installation
+
+```{r}
+#| eval: false
+# Install from GitHub or CRAN as applicable
+# install.packages("crane")
+```
+
+## Basic Usage
+
+```{r}
+#| eval: false
+library(crane)
+
+# Add your crane experiments here
+```
+
+## Resources
+
+- [Pharmaverse](https://pharmaverse.org/)
+
+## Experiments
+
+*Add your experiments here...*

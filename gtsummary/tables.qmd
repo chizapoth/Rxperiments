@@ -1,0 +1,37 @@
+---
+title: "Summary Tables with gtsummary"
+---
+
+## Demographics Tables
+
+```{r}
+#| eval: false
+library(gtsummary)
+
+# Demographics table example
+trial %>%
+  tbl_summary(
+    include = c(age, grade, stage),
+    by = trt,
+    statistic = list(
+      all_continuous() ~ "{mean} ({sd})",
+      all_categorical() ~ "{n} ({p}%)"
+    )
+  ) %>%
+  add_overall() %>%
+  add_p() %>%
+  bold_labels()
+```
+
+## Regression Tables
+
+```{r}
+#| eval: false
+# Logistic regression summary
+glm(response ~ age + grade, data = trial, family = binomial) %>%
+  tbl_regression(exponentiate = TRUE)
+```
+
+## Experiments
+
+*Add your experiments here...*

@@ -1,0 +1,16 @@
+/* Custom styles for Rxperiments */
+
+/* Sidebar styling */
+.sidebar {
+  background-color: #f8f9fa;
+}
+
+/* Code block enhancements */
+pre {
+  border-radius: 6px;
+}
+
+/* Subtle callout styling */
+.callout {
+  margin: 1.5em 0;
+}

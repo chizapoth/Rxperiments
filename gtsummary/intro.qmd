@@ -1,0 +1,34 @@
+---
+title: "Getting Started with gtsummary"
+---
+
+## Overview
+
+`gtsummary` creates publication-ready analytical and summary tables in R.
+
+## Installation
+
+```{r}
+#| eval: false
+install.packages("gtsummary")
+```
+
+## Basic Example
+
+```{r}
+#| eval: false
+library(gtsummary)
+
+# Create a summary table
+trial %>%
+  tbl_summary(
+    include = c(age, grade, response),
+    by = trt
+  ) %>%
+  add_p()
+```
+
+## Resources
+
+- [gtsummary documentation](https://www.danieldsjoberg.com/gtsummary/)
+- [gtsummary gallery](https://www.danieldsjoberg.com/gtsummary/articles/gallery.html)

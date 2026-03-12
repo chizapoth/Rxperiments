@@ -1,0 +1,37 @@
+---
+title: "rtables - Complex Table Layouts"
+---
+
+## Overview
+
+`rtables` provides a framework for creating complex tables for regulatory submissions.
+
+## Installation
+
+```{r}
+#| eval: false
+install.packages("rtables")
+```
+
+## Basic Example
+
+```{r}
+#| eval: false
+library(rtables)
+
+# Basic table layout
+lyt <- basic_table() %>%
+  split_cols_by("ARM") %>%
+  analyze("AGE", afun = mean)
+
+# Build the table
+# build_table(lyt, data = adsl)
+```
+
+## Resources
+
+- [rtables documentation](https://insightsengineering.github.io/rtables/)
+
+## Experiments
+
+*Add your experiments here...*
