@@ -1,0 +1,128 @@
+---
+title: "Which variable to summarize in `tbl_summary()`"
+code-fold: true
+categories: [tbl_summary]
+---
+
+
+Quick way to remember where to put what variable: 
+
+- `by`: stratification, as column. Typically treatment arm.
+- `include`: variables to summarize, as rows. 
+  - continuous: value in one row, missing in another row.
+  - categorical: one row per category, missing in another row.
+
+To stratify by **more than one variable**, you can make use of the **wide format** data.
+
+
+### Load data and packages
+
+We are going to use the `trial` data from `gtsummary`. 
+
+```{r}
+#| eval: true
+#| message: false
+#| warning: false
+library(gtsummary)
+library(dplyr)
+library(tidyr)
+head(trial)
+```
+
+
+# Basic `tbl_summary()` table
+
+When including both numeric and categorical variables, a long table will be created.
+
+```{r}
+#| eval: true
+tbl_summary(data = trial, include = c(age, marker, grade))
+```
+
+We can stratify by treatment arm by using the `by` argument. 
+
+
+```{r}
+#| eval: true
+
+# stratify by treatment arm
+tbl_summary(data = trial, include = c(age, marker, grade), by = trt, missing = "no")
+```
+
+# Stratify by 2 variables
+
+In the example above, we stratified by one variable: treatment arm. Other variables are summarized as rows. Notice the indentation: it is still 3 variables: age, marker, grade.
+
+What if you want to stratify between the variables presented in the rows? For example, you want to know what is the **age across different levels of stages**. you can do this:
+
+```{r}
+# stratify by stage
+tbl_summary(data = trial, include = c(age), by = stage, missing = "no")
+```
+
+The disadvantage of this is that you cannot stratify by **treatment arm** at the same time. You need to make use of the wide format data.
+
+### Use wide format
+
+You need to keep the ID variable to make sure the data is in wide format, to keep each row uniquely identifiable.
+```{r}
+trial_mini <- select(trial, trt, age, stage) |> mutate(id = 1:nrow(trial))
+# wide format
+trial_mini_wide <- trial_mini |>
+  pivot_wider(names_from = stage, values_from = age)
+
+# how long format looks like
+head(trial_mini)
+# stage variable is expanded into 4 variables: T1, T2, T3, T4
+head(trial_mini_wide)
+```
+
+
+Now you can summarize all the stage variables together using `include()`. They will be piled together in rows, all about the target numeric variable, **age**. 
+
+```{r}
+tbl_summary(
+  trial_mini_wide,
+  include = c('T1', 'T2', 'T3', 'T4'),
+  missing = "no"
+)
+```
+
+You should name the variables in the wide format to make sure the labels are informative. Use `label` argument, and specify a list.
+
+```{r}
+tbl_summary(
+  trial_mini_wide,
+  by = trt,
+  include = c('T1', 'T2', 'T3', 'T4'),
+  missing = 'no',
+  label = list(
+    'T1' = "Stage T1",
+    'T2' = "Stage T2",
+    'T3' = "Stage T3",
+    'T4' = "Stage T4"
+  )
+)
+```
+
+### What statistics? 
+
+You can specify a different statistics than its default. 
+
+```{r}
+tbl_summary(
+  trial_mini_wide,
+  by = trt,
+  include = c('T1', 'T2', 'T3', 'T4'),
+  missing = 'no',
+  label = list(
+    'T1' = "Stage T1",
+    'T2' = "Stage T2",
+    'T3' = "Stage T3",
+    'T4' = "Stage T4"
+  ),
+  statistic = list(all_continuous() ~ "{mean} ({sd})")
+)
+```
+
+

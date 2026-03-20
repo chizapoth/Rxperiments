@@ -10,7 +10,5 @@ Visit: [https://chizapoth.github.io/Rxperiments](https://chizapoth.github.io/Rxp
 
 - **gtsummary** - Publication-ready summary tables
 - **crane** - Clinical reporting tools
-- (planned) **admiral** - ADaM dataset creation
-- (planned) **rtables** - Complex regulatory tables
 
 ... and more.

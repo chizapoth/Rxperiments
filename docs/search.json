@@ -4,50 +4,35 @@
     "href": "index.html",
     "title": "Rxperiments",
     "section": "",
-    "text": "This site documents my experiments and learning journey with various pharmaverse packages for clinical data analysis in R.",
-    "crumbs": [
-      "Home"
-    ]
+    "text": "This site documents my experiments and learning journey with various pharmaverse packages for clinical data analysis in R."
   },
   {
     "objectID": "index.html#welcome",
     "href": "index.html#welcome",
     "title": "Rxperiments",
     "section": "",
-    "text": "This site documents my experiments and learning journey with various pharmaverse packages for clinical data analysis in R.",
-    "crumbs": [
-      "Home"
-    ]
+    "text": "This site documents my experiments and learning journey with various pharmaverse packages for clinical data analysis in R."
   },
   {
     "objectID": "index.html#packages-covered",
     "href": "index.html#packages-covered",
     "title": "Rxperiments",
     "section": "Packages Covered",
-    "text": "Packages Covered\n\ngtsummary\nA package for creating publication-ready analytical and summary tables. Perfect for demographics tables, regression summaries, and more.\n\n\ncrane\nTools for clinical reporting and analysis.\n\n\nOther Pharmaverse Packages\n\nadmiral - ADaM dataset creation\nrtables - Complex table layouts for regulatory submissions",
-    "crumbs": [
-      "Home"
-    ]
+    "text": "Packages Covered\n\ngtsummary\ncrane"
   },
   {
     "objectID": "index.html#about-this-site",
     "href": "index.html#about-this-site",
     "title": "Rxperiments",
     "section": "About This Site",
-    "text": "About This Site\nThis is a personal learning resource. Code examples are experimental and may not represent best practices.",
-    "crumbs": [
-      "Home"
-    ]
+    "text": "About This Site\nThis is a personal learning resource. Code examples are experimental and may not represent best practices."
   },
   {
     "objectID": "index.html#resources",
     "href": "index.html#resources",
     "title": "Rxperiments",
     "section": "Resources",
-    "text": "Resources\n\nPharmaverse\ngtsummary documentation\nCDISC Standards",
-    "crumbs": [
-      "Home"
-    ]
+    "text": "Resources\n\nPharmaverse\ngtsummary documentation"
   },
   {
     "objectID": "gtsummary/tables.html",
@@ -345,5 +330,82 @@
       "gtsummary",
       "Getting Started"
     ]
+  },
+  {
+    "objectID": "articles/intro.html",
+    "href": "articles/intro.html",
+    "title": "Getting Started with gtsummary",
+    "section": "",
+    "text": "gtsummary creates publication-ready analytical and summary tables in R."
+  },
+  {
+    "objectID": "articles/intro.html#overview",
+    "href": "articles/intro.html#overview",
+    "title": "Getting Started with gtsummary",
+    "section": "",
+    "text": "gtsummary creates publication-ready analytical and summary tables in R."
+  },
+  {
+    "objectID": "articles/intro.html#installation",
+    "href": "articles/intro.html#installation",
+    "title": "Getting Started with gtsummary",
+    "section": "Installation",
+    "text": "Installation\n\n\nCode\ninstall.packages(\"gtsummary\")"
+  },
+  {
+    "objectID": "articles/intro.html#basic-example",
+    "href": "articles/intro.html#basic-example",
+    "title": "Getting Started with gtsummary",
+    "section": "Basic Example",
+    "text": "Basic Example\n\n\nCode\nlibrary(gtsummary)\n\n# Create a summary table\ntrial %&gt;%\n  tbl_summary(\n    include = c(age, grade, response),\n    by = trt\n  ) %&gt;%\n  add_p()"
+  },
+  {
+    "objectID": "articles/tables.html",
+    "href": "articles/tables.html",
+    "title": "Summary Tables with gtsummary",
+    "section": "",
+    "text": "Code\nlibrary(gtsummary)\n\n# Demographics table example\ntrial %&gt;%\n  tbl_summary(\n    include = c(age, grade, stage),\n    by = trt,\n    statistic = list(\n      all_continuous() ~ \"{mean} ({sd})\",\n      all_categorical() ~ \"{n} ({p}%)\"\n    )\n  ) %&gt;%\n  add_overall() %&gt;%\n  add_p() %&gt;%\n  bold_labels()"
+  },
+  {
+    "objectID": "articles/tables.html#demographics-tables",
+    "href": "articles/tables.html#demographics-tables",
+    "title": "Summary Tables with gtsummary",
+    "section": "",
+    "text": "Code\nlibrary(gtsummary)\n\n# Demographics table example\ntrial %&gt;%\n  tbl_summary(\n    include = c(age, grade, stage),\n    by = trt,\n    statistic = list(\n      all_continuous() ~ \"{mean} ({sd})\",\n      all_categorical() ~ \"{n} ({p}%)\"\n    )\n  ) %&gt;%\n  add_overall() %&gt;%\n  add_p() %&gt;%\n  bold_labels()"
+  },
+  {
+    "objectID": "articles/tables.html#regression-tables",
+    "href": "articles/tables.html#regression-tables",
+    "title": "Summary Tables with gtsummary",
+    "section": "Regression Tables",
+    "text": "Regression Tables\n\n\nCode\n# Logistic regression summary\nglm(response ~ age + grade, data = trial, family = binomial) %&gt;%\n  tbl_regression(exponentiate = TRUE)"
+  },
+  {
+    "objectID": "articles/tables.html#experiments",
+    "href": "articles/tables.html#experiments",
+    "title": "Summary Tables with gtsummary",
+    "section": "Experiments",
+    "text": "Experiments\nAdd your experiments here…"
+  },
+  {
+    "objectID": "articles/index.html",
+    "href": "articles/index.html",
+    "title": "Articles",
+    "section": "",
+    "text": "Order By\n      Default\n      \n        Title\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nTitle\n\n\n\nCategories\n\n\n\n\n\n\n\n\nWhich variable to summarize in tbl_summary()\n\n\ntbl_summary\n\n\n\n\n\n\nMultiple tables\n\n\n \n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "articles/index.html#tlgs",
+    "href": "articles/index.html#tlgs",
+    "title": "Articles",
+    "section": "",
+    "text": "Order By\n      Default\n      \n        Title\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nTitle\n\n\n\nCategories\n\n\n\n\n\n\n\n\nWhich variable to summarize in tbl_summary()\n\n\ntbl_summary\n\n\n\n\n\n\nMultiple tables\n\n\n \n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "articles/01-basic-tables.html",
+    "href": "articles/01-basic-tables.html",
+    "title": "Which variable to summarize in tbl_summary()",
+    "section": "",
+    "text": "Quick way to remember where to put what variable:\n\nby: stratification, as column. Typically treatment arm.\ninclude: variables to summarize, as rows.\n\ncontinuous: value in one row, missing in another row.\ncategorical: one row per category, missing in another row.\n\n\nTo stratify by more than one variable, you can make use of the wide format data.\n\nLoad data and packages\nWe are going to use the trial data from gtsummary.\n\n\nCode\nlibrary(gtsummary)\nlibrary(dplyr)\nlibrary(tidyr)\nhead(trial)\n\n\n# A tibble: 6 × 8\n  trt      age marker stage grade response death ttdeath\n  &lt;chr&gt;  &lt;dbl&gt;  &lt;dbl&gt; &lt;fct&gt; &lt;fct&gt;    &lt;int&gt; &lt;int&gt;   &lt;dbl&gt;\n1 Drug A    23  0.16  T1    II           0     0    24  \n2 Drug B     9  1.11  T2    I            1     0    24  \n3 Drug A    31  0.277 T1    II           0     0    24  \n4 Drug A    NA  2.07  T3    III          1     1    17.6\n5 Drug A    51  2.77  T4    III          1     1    16.4\n6 Drug B    39  0.613 T4    I            0     1    15.6\n\n\n\n\nBasic tbl_summary() table\nWhen including both numeric and categorical variables, a long table will be created.\n\n\nCode\ntbl_summary(data = trial, include = c(age, marker, grade))\n\n\n\n\n\n\n\n\n\n\n\n\nCharacteristic\nN = 2001\n\n\n\n\nAge\n47 (38, 57)\n\n\n    Unknown\n11\n\n\nMarker Level (ng/mL)\n0.64 (0.22, 1.41)\n\n\n    Unknown\n10\n\n\nGrade\n\n\n\n\n    I\n68 (34%)\n\n\n    II\n68 (34%)\n\n\n    III\n64 (32%)\n\n\n\n1 Median (Q1, Q3); n (%)\n\n\n\n\n\n\n\n\nWe can stratify by treatment arm by using the by argument.\n\n\nCode\n# stratify by treatment arm\ntbl_summary(data = trial, include = c(age, marker, grade), by = trt, missing = \"no\")\n\n\n\n\n\n\n\n\n\n\n\n\n\nCharacteristic\nDrug A\nN = 981\nDrug B\nN = 1021\n\n\n\n\nAge\n46 (37, 60)\n48 (39, 56)\n\n\nMarker Level (ng/mL)\n0.84 (0.23, 1.60)\n0.52 (0.18, 1.21)\n\n\nGrade\n\n\n\n\n\n\n    I\n35 (36%)\n33 (32%)\n\n\n    II\n32 (33%)\n36 (35%)\n\n\n    III\n31 (32%)\n33 (32%)\n\n\n\n1 Median (Q1, Q3); n (%)\n\n\n\n\n\n\n\n\n\n\nStratify by 2 variables\nIn the example above, we stratified by one variable: treatment arm. Other variables are summarized as rows. Notice the indentation: it is still 3 variables: age, marker, grade.\nWhat if you want to stratify between the variables presented in the rows? For example, you want to know what is the age across different levels of stages. you can do this:\n\n\nCode\n# stratify by stage\ntbl_summary(data = trial, include = c(age), by = stage, missing = \"no\")\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCharacteristic\nT1\nN = 531\nT2\nN = 541\nT3\nN = 431\nT4\nN = 501\n\n\n\n\nAge\n45 (36, 57)\n48 (42, 55)\n50 (39, 60)\n46 (37, 56)\n\n\n\n1 Median (Q1, Q3)\n\n\n\n\n\n\n\n\nThe disadvantage of this is that you cannot stratify by treatment arm at the same time. You need to make use of the wide format data.\n\nUse wide format\nYou need to keep the ID variable to make sure the data is in wide format, to keep each row uniquely identifiable.\n\n\nCode\ntrial_mini &lt;- select(trial, trt, age, stage) |&gt; mutate(id = 1:nrow(trial))\n# wide format\ntrial_mini_wide &lt;- trial_mini |&gt;\n  pivot_wider(names_from = stage, values_from = age)\n\n# how long format looks like\nhead(trial_mini)\n\n\n# A tibble: 6 × 4\n  trt      age stage    id\n  &lt;chr&gt;  &lt;dbl&gt; &lt;fct&gt; &lt;int&gt;\n1 Drug A    23 T1        1\n2 Drug B     9 T2        2\n3 Drug A    31 T1        3\n4 Drug A    NA T3        4\n5 Drug A    51 T4        5\n6 Drug B    39 T4        6\n\n\nCode\n# stage variable is expanded into 4 variables: T1, T2, T3, T4\nhead(trial_mini_wide)\n\n\n# A tibble: 6 × 6\n  trt       id    T1    T2    T3    T4\n  &lt;chr&gt;  &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1 Drug A     1    23    NA    NA    NA\n2 Drug B     2    NA     9    NA    NA\n3 Drug A     3    31    NA    NA    NA\n4 Drug A     4    NA    NA    NA    NA\n5 Drug A     5    NA    NA    NA    51\n6 Drug B     6    NA    NA    NA    39\n\n\nNow you can summarize all the stage variables together using include(). They will be piled together in rows, all about the target numeric variable, age.\n\n\nCode\ntbl_summary(\n  trial_mini_wide,\n  include = c('T1', 'T2', 'T3', 'T4'),\n  missing = \"no\"\n)\n\n\n\n\n\n\n\n\nCharacteristic\nN = 2001\n\n\n\n\nAge\n45 (36, 57)\n\n\nAge\n48 (42, 55)\n\n\nAge\n50 (39, 60)\n\n\nAge\n46 (37, 56)\n\n\n\n1 Median (Q1, Q3)\n\n\n\n\n\n\n\n\nYou should name the variables in the wide format to make sure the labels are informative. Use label argument, and specify a list.\n\n\nCode\ntbl_summary(\n  trial_mini_wide,\n  by = trt,\n  include = c('T1', 'T2', 'T3', 'T4'),\n  missing = 'no',\n  label = list(\n    'T1' = \"Stage T1\",\n    'T2' = \"Stage T2\",\n    'T3' = \"Stage T3\",\n    'T4' = \"Stage T4\"\n  )\n)\n\n\n\n\n\n\n\n\n\n\n\n\n\nCharacteristic\nDrug A\nN = 981\nDrug B\nN = 1021\n\n\n\n\nStage T1\n43 (31, 53)\n47 (43, 57)\n\n\nStage T2\n48 (41, 63)\n49 (42, 53)\n\n\nStage T3\n48 (38, 61)\n53 (40, 59)\n\n\nStage T4\n46 (36, 60)\n45 (37, 54)\n\n\n\n1 Median (Q1, Q3)\n\n\n\n\n\n\n\n\n\n\nWhat statistics?\nYou can specify a different statistics than its default.\n\n\nCode\ntbl_summary(\n  trial_mini_wide,\n  by = trt,\n  include = c('T1', 'T2', 'T3', 'T4'),\n  missing = 'no',\n  label = list(\n    'T1' = \"Stage T1\",\n    'T2' = \"Stage T2\",\n    'T3' = \"Stage T3\",\n    'T4' = \"Stage T4\"\n  ),\n  statistic = list(all_continuous() ~ \"{mean} ({sd})\")\n)\n\n\n\n\n\n\n\n\n\n\n\n\n\nCharacteristic\nDrug A\nN = 981\nDrug B\nN = 1021\n\n\n\n\nStage T1\n44 (15)\n50 (14)\n\n\nStage T2\n50 (13)\n46 (12)\n\n\nStage T3\n49 (14)\n50 (15)\n\n\nStage T4\n45 (17)\n44 (15)\n\n\n\n1 Mean (SD)"
   }
 ]

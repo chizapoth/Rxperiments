@@ -9,18 +9,9 @@ This site documents my experiments and learning journey with various pharmaverse
 
 ## Packages Covered
 
-### gtsummary
+- gtsummary
+- crane
 
-A package for creating publication-ready analytical and summary tables. Perfect for demographics tables, regression summaries, and more.
-
-### crane
-
-Tools for clinical reporting and analysis.
-
-### Other Pharmaverse Packages
-
-- **admiral** - ADaM dataset creation
-- **rtables** - Complex table layouts for regulatory submissions
 
 ## About This Site
 
@@ -30,4 +21,3 @@ This is a personal learning resource. Code examples are experimental and may not
 
 - [Pharmaverse](https://pharmaverse.org/)
 - [gtsummary documentation](https://www.danieldsjoberg.com/gtsummary/)
-- [CDISC Standards](https://www.cdisc.org/)

@@ -1,0 +1,21 @@
+---
+title: "Articles"
+listing:
+  - id: gtsummary
+    contents: 
+      - "01-basic-tables.qmd"
+      - "02-multiple-tables.qmd"
+
+    type: table
+    sort: "date desc"
+    fields: [title, categories]
+    filter-ui: true
+    sort-ui: true
+---
+
+## TLGs
+
+::: {#gtsummary}
+:::
+
+

@@ -6,28 +6,12 @@ website:
   title: "Rxperiments"
   description: "Personal experiments and learning with gtsummary, crane, and other pharmaverse packages"
   
-  sidebar:
-    style: docked
-    search: true
-    contents:
+  navbar:
+    left:
       - href: index.qmd
         text: Home
-      - section: "gtsummary"
-        contents:
-          - href: gtsummary/intro.qmd
-            text: Getting Started
-          - href: gtsummary/tables.qmd
-            text: Summary Tables
-      - section: "crane"
-        contents:
-          - href: crane/intro.qmd
-            text: Getting Started
-      - section: "Other Packages"
-        contents:
-          - href: other/admiral.qmd
-            text: admiral
-          - href: other/rtables.qmd
-            text: rtables
+      - text: "Articles"
+        href: articles/index.qmd
 
   page-footer:
     center: "Built with Quarto"
